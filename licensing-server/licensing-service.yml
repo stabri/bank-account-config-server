@@ -1,3 +1,12 @@
+eureka:
+  instance:
+    preferIpAddress: "true"
+  client:
+    registerWithEureka: "true"
+    fetchRegistry: "true"
+    serviceUrl:
+        defaultZone: "http://localhost:8761/eureka/"
+
 tracer:
   property: "I AM THE DEFAULT"
 spring:
@@ -7,21 +16,13 @@ spring:
     properties:
       hibernate:
         dialect: "org.hibernate.dialect.PostgreSQLDialect"
-  datasource: 
+  datasource:
     platform: "postgres"
     url: "jdbc:postgresql://localhost/eagle_eye_local"
     username: "postgres"
-    password: "{cipher}3e6577ecede7b0e37a11cdab96b00844f2789e5d4f65e44260078d50a4849ef6"
+    password: "pass"
     testWhileIdle: "true"
     validationQuery: "SELECT 1"
-    
+
   database:
     driverClassName: "org.postgresql.Driver"
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-        defaultZone: http://localhost:8761/eureka/
